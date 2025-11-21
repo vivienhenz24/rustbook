@@ -1,0 +1,9 @@
+[package]
+name = "rust_book_prog"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rust_book_prog"
+path = "src/main.rs"
+
