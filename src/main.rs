@@ -1,18 +1,11 @@
 
-#[allow(dead_code)]
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter,
-}
+fn main() {
 
-fn main(coin: Coin) -> u8 {
-    match coin {
-        Coin::Penny => 1,
-        Coin::Nickel => 5,
-        Coin::Dime  => 10,
-        Coin::Quarter => 25,
+    let mut v = vec![1,2,3,4,5];
+
+    for i in &mut v {
+        *i += 50;
+        
     }
-
+    println!("{:?}", v);
 }
