@@ -1,11 +1,17 @@
+use std::collections::HashMap;
+
 
 fn main() {
+    
+    let text = "je suis je suis tranquille";
 
-    let mut v = vec![1,2,3,4,5];
+    let mut map: HashMap<String, u32> = HashMap::new();
 
-    for i in &mut v {
-        *i += 50;
-        
+
+    for word in text.split_whitespace() {
+
+        let count = map.entry(word.to_string()).or_insert(0);
+        *count += 1;
     }
-    println!("{:?}", v);
+println!("{:?}", map);
 }
